@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 8356072786360960522}
   - component: {fileID: 4326912443088202638}
   - component: {fileID: 2320625101258760660}
+  - component: {fileID: 7511601814103522073}
+  - component: {fileID: 2992791358745198216}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,11 +90,11 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8356072786360960533}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5086529
+  m_Center: {x: 0, y: 0, z: -0.0086529255}
 --- !u!114 &4326912443088202638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +120,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deead78110e96ce49a9a5b88a68b5344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7511601814103522073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8356072786360960533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c30b6b7fd71bc041a3c0dcb03fe4194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefabs: {fileID: 2488808028288478186, guid: e7c2ce08e1446b54f98076415d6606a9,
+    type: 3}
+  spawnValue: 0
+--- !u!54 &2992791358745198216
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8356072786360960533}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

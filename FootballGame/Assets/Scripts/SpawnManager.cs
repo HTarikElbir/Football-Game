@@ -12,23 +12,24 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
 
-        
+        SpawnObstacle();
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(spawnValue == true)
+       /*if(spawnValue)
         {
             SpawnObstacle();
             spawnValue = false;   
-        }
+        }*/
             
     }
-    void SpawnObstacle()
+    public void SpawnObstacle()
     {
-        Vector3 spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        Vector3 spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, spawnPosZ);
 
         Instantiate(obstaclePrefabs,spawnPosition,obstaclePrefabs.transform.rotation);
     }
+    
 }
