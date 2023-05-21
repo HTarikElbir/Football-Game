@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Ball
+  - GK
+  - ball
+  - gk
   layers:
   - Default
   - TransparentFX

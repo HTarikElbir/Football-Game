@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2133978031497727195}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: gk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefabs: {fileID: 2488808028288478186}
-  spawnValue: 0

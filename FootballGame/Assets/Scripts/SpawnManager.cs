@@ -1,29 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject obstaclePrefabs;
+
+    private GameObject obstaclePrefabs;
+    
     private float spawnRangeX = 10.0f;
     private float spawnPosZ = 20.0f;
-    public bool spawnValue = true;
+
+    public bool spawnValue ;
+    public float score = 0;
+    private void Awake()
+    {
+        obstaclePrefabs =Resources.Load<GameObject>("Prefabs/Cube");
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
-
-        SpawnObstacle();
+        spawnValue = true;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       /*if(spawnValue)
+        if (spawnValue == true)
         {
             SpawnObstacle();
-            spawnValue = false;   
-        }*/
-            
+            spawnValue = false;
+        }
+        UpdateScore();
     }
     public void SpawnObstacle()
     {
@@ -31,5 +41,12 @@ public class SpawnManager : MonoBehaviour
 
         Instantiate(obstaclePrefabs,spawnPosition,obstaclePrefabs.transform.rotation);
     }
-    
+
+
+    public void UpdateScore() 
+    {
+       GameObject.Find("Score").GetComponent<Text>().text = "Score:" + score;
+    }
+
+   
 }

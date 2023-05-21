@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2992791358745198216}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Bullet
+  m_TagString: ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefabs: {fileID: 2488808028288478186, guid: e7c2ce08e1446b54f98076415d6606a9,
     type: 3}
-  spawnValue: 0
+  spawnValue: 1
 --- !u!54 &2992791358745198216
 Rigidbody:
   m_ObjectHideFlags: 0
