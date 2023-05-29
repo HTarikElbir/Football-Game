@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     public Slider timerSlider;
     public Text timerText;
     public float gameTime;
-
+    private float currentGameTime;
     private bool stopTimer = true;
     // Start is called before the first frame update
     void Start()
@@ -16,26 +16,37 @@ public class Timer : MonoBehaviour
         stopTimer = false;
         timerSlider.maxValue = gameTime;
         timerSlider.value = gameTime;
+        currentGameTime = gameTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float time = gameTime - Time.time;
-
-        int minutes = Mathf.FloorToInt(time / 60);
-        int seconds = Mathf.FloorToInt(time - minutes * 60);
+        if (stopTimer)
+            return;
+        // float time = gameTime - Time.time;
+        currentGameTime -= Time.deltaTime;
+        int minutes = Mathf.FloorToInt(currentGameTime / 60);
+        int seconds = Mathf.FloorToInt(currentGameTime - minutes * 60);
 
         string textTime = string.Format("{0:0}:{1:00}",minutes,seconds);
 
-        if (time <= 0)
+        if (currentGameTime<= 0)
         {
             stopTimer = true;
         }
         if (stopTimer == false)
         {
             timerText.text = textTime;
-            timerSlider.value = time;
+            timerSlider.value = currentGameTime;
         }
+    }
+    public void SetGameTime(float time)
+    {
+        gameTime = time;
+        currentGameTime = gameTime;
+        stopTimer = false;
+        timerSlider.maxValue = gameTime;
+        timerSlider.value = gameTime;
     }
 }
