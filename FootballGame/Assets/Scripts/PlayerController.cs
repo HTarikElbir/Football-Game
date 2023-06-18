@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefabs;
     private float xRange = 10.0f;
     private float speed = 10.0f;
+    public AudioClip shotSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +31,11 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector3.right * Time.deltaTime * speed * movDirection);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefabs, transform.position, projectilePrefabs.transform.rotation);
+            gameObject.GetComponent<AudioSource>().clip = shotSound;
+            gameObject.GetComponent<AudioSource>().Play();
         }
     }
 }

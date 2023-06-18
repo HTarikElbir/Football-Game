@@ -9,6 +9,9 @@ TagManager:
   - GK
   - ball
   - gk
+  - StadiumAudio
+  - New tag
+  - SA
   layers:
   - Default
   - TransparentFX

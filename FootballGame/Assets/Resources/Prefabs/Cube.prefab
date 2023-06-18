@@ -118,4 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c30b6b7fd71bc041a3c0dcb03fe4194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefabs: {fileID: 2488808028288478186}
+  shotSound: {fileID: 8300000, guid: 8b9c98e0477e66d40ba31637a8f4edeb, type: 3}

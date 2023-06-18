@@ -22,7 +22,6 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         spawnValue = true;
-        
     }
 
     // Update is called once per frame
@@ -34,6 +33,10 @@ public class SpawnManager : MonoBehaviour
             spawnValue = false;
         }
         UpdateScore();
+       /* if (score > bestScore)
+        {
+            bestScore = score;
+        }*/
     }
     public void SpawnObstacle()
     {

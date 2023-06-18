@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class Timer : MonoBehaviour
         if (currentGameTime<= 0)
         {
             stopTimer = true;
+            SceneManager.LoadScene("GameoverScene");
         }
         if (stopTimer == false)
         {
